@@ -1,0 +1,210 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+/* universal */
+
+html,
+body{
+  background-color: #ECECEC;
+  height: 90%;
+}
+
+section{
+  overflow: auto;
+}
+
+textarea{
+  resize: vertical;
+}
+
+.center{
+  text-align: center;
+}
+
+.center h1{
+  margin-bottom: 10px;
+}
+
+.navbar-inverse{
+  background-color: #FFF;
+  border: 1px solid #ECECEC;
+  border-radius: 5px;
+  margin-top: 5px;
+  margin-left: 19px;
+  margin-right: 19px;
+}
+.container-main{
+  margin-top: 90px;
+  width: 97%;
+  border: 1px solid #ECECEC;
+  padding: 0;
+}
+
+.main-block{
+  background-color: #FFF;
+  border-radius: 5px;
+}
+
+.right-block-wrapper{
+  padding-left: 15px;
+  padding-right: 0;
+  float: right;
+}
+
+.right-block{
+  background-color: #FFF;
+  width: 100%;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 30px;
+}
+
+.right-block-title{
+  margin-bottom: 10px;
+}
+
+.right-block-title  h3{
+  text-align: center;
+  margin: 0px;
+}
+
+/* Google Map */
+#map{
+  width: 100%;
+  height: 68vh;
+  border: 1px solid #ECECEC;
+}
+
+/* Typography */
+
+h1, h2, h3, h4, h5, h6{
+  line-height: 1;
+}
+
+h1{
+  font-size: 3em;
+  letter-spacing: -2px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+h2 {
+  font-size: 1.2em;
+  letter-spacing: -1px;
+  margin-bottom: 30px;
+  text-align: center;
+  font-weight: normal;
+  color: #777;
+}
+
+p {
+  font-size: 1.1em;
+  line-height: 1.7em;
+}
+
+.main-intro p{
+  font-size: 14px;
+}
+
+.main-block-section h1{
+  text-align: center;
+  margin-left: 225px;
+}
+
+.main-intro{
+  margin-bottom: 15px;
+}
+
+.main-logo{
+  margin-top: 0px;
+}
+
+.footer-text{
+  font-size: 1em;
+}
+
+#nav-links{
+  font-size: 15px;
+  position: relative;
+  top: 50%;
+  transform: translateY(55%);
+}
+
+.nav-links{
+  border-right: 1px solid #BDC3C7;
+}
+
+.nav > li > a {
+  padding-top: 6px;
+  padding-bottom: 6px;
+  padding-left: 12px;
+  padding-right: 12px;
+  margin-right: 5px;
+  margin-left: 5px;
+  margin-top: 2px;
+  margin-top: 2px;
+  border: 0;
+  border-radius: 5px;
+}
+
+#nav-links a:hover{
+  background-color: #CFCFCF;
+  color: white;
+}
+
+.active-nav{
+  background-color: #E8E8E8;
+  color: #787878;
+}
+/* Header setup */
+
+.block-logo{
+  float: left;
+  margin-right: 10px;
+  padding: 10px;
+  width: 6%;
+}
+.inline-logo{
+  float: left;
+  margin-right: 10px;
+  margin-left: -20px;
+  padding: 10px;
+  width: 15%;
+}
+
+/* Footer setup */
+
+/* Wrapper for page content to push down footer */
+#wrap {
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  /* Negative indent footer by it's height */
+}
+
+/* Set the fixed height of the footer here */
+#footer {
+  height: 70px;
+}
+#footer {
+  background-color: #FFF;
+  border: 1px solid #ECECEC;
+  border-radius: 5px;
+  position: absolute;
+  margin-bottom: 10px;
+  margin-top: -30px;
+  padding: 15px;
+  margin-left: 20px;
+  margin-right: 20px;
+  width: 97%;
+}
+
+/* Lastly, apply responsive CSS fixes as necessary */
+@media (max-width: 767px) {
+  #footer {
+    margin-left: -20px;
+    margin-right: -20px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}

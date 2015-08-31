@@ -5,8 +5,67 @@
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
     <%= csrf_meta_tags %>
+    <!--[if lt IE 9]>
+      <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/r29/html5.min.js">
+      </script>
+    <![endif]-->
+    <script src="https://maps.googleapis.com/maps/api/js"></script>
+    <script>
+      function initialize() {
+        var cerLatLng = {lat: 25.673798 , lng: -100.347783 }
+
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 15,
+          center: cerLatLng
+        });
+
+        var marker = new google.maps.Marker({
+          position: cerLatLng,
+          map: map,
+          title: 'CER Cirugía Plástica'
+        });
+      }
+      google.maps.event.addDomListener(window, 'load', initialize);
+    </script>
   </head>
   <body>
-    <%= yield %>
+    <div id="wrap">
+      <header class="navbar navbar-fixed-top navbar-inverse">
+        <div class="container">
+          <!-- Block Logo -->
+          <!-- <%= link_to image_tag("cer_logo.png", alt: "CER Logo", :class => "block-logo") %> -->
+          <!-- Inline Logo -->
+          <%= link_to image_tag("inline_logo.png", alt: "CER Logo", :class => "inline-logo") %>
+          <nav>
+            <ul class="nav navbar-nav navbar-right" id="nav-links">
+              <li class="nav-links"><%= link_to "Home", '#', :class => "nav-links" %></li>
+              <li class="nav-links"><%= link_to "Curriculum Vitae", '#', :class => "nav-links" %></li>
+              <li class="nav-links"><%= link_to "Cirugías", '#', :class => "nav-links" %></li>
+              <li class="nav-links"><%= link_to "Instalaciones", '#', :class => "nav-links" %></li>
+              <li class="nav-links"><%= link_to "Contáctanos", '#', :class => "nav-links" %></li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+      <div class="container container-main">
+        <div class="col-sm-12">
+          <div class="row">
+            <div class="col-sm-9 main-block">
+                <%= yield %>
+            </div>
+            <div class="col-sm-3 right-block-wrapper">
+                <div class="right-block">
+                  <%= render "static_pages/right_block"%>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="footer">
+      <div class="container">
+        <p class="muted credit center footer-text">CER  - Belisario Domínguez 2501  - Col. Obispado  - Monterrey, Nuevo León, México  - C.P. 64060  -  Tels. Fax (81) 8348-9666  /  (81) 8348-7905.</p>
+      </div>
+    </div>
   </body>
 </html>
