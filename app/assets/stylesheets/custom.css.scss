@@ -1,11 +1,14 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+/* Color Vars */
+$light-gray: #ECECEC;
+
 /* universal */
 
 html,
 body{
-  background-color: #ECECEC;
+  background-color: $light-gray;
   height: 90%;
 }
 
@@ -27,7 +30,7 @@ textarea{
 
 .navbar-inverse{
   background-color: #FFF;
-  border: 1px solid #ECECEC;
+  border: 1px solid $light-gray;
   border-radius: 5px;
   margin-top: 5px;
   margin-left: 19px;
@@ -36,7 +39,7 @@ textarea{
 .container-main{
   margin-top: 90px;
   width: 97%;
-  border: 1px solid #ECECEC;
+  border: 1px solid $light-gray;
   padding: 0;
 }
 
@@ -72,7 +75,7 @@ textarea{
 #map{
   width: 100%;
   height: 68vh;
-  border: 1px solid #ECECEC;
+  border: 1px solid $light-gray;
 }
 
 /* Typography */
@@ -188,7 +191,7 @@ p {
 }
 #footer {
   background-color: #FFF;
-  border: 1px solid #ECECEC;
+  border: 1px solid $light-gray;
   border-radius: 5px;
   position: absolute;
   margin-bottom: 10px;
