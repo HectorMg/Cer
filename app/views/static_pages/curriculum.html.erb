@@ -1,2 +1,50 @@
 <% provide(:title, "Curriculum" ) %>
-<h1>Curriculum Vitae</h1>
+<section>
+  <h1 class="cv-title">Curriculum Vitae</h1>
+  <div class="row featurette">
+    <div class="col-md-3 cv-pic">
+      <%= image_tag("headshot.png", alt: "Dr. Morales", :class => "featurette-image", :id => "headshot")%>
+    </div>
+    <div class="col-md-9">
+      <div class="row">
+        <h2 class="cv-subtitle">Dr. Héctor Javier Morales Gracia</h2>
+      </div>
+
+      <div class="row">
+        <h3>Datos Generales</h3>
+      </div>
+      <div class="row">
+        <div class="col-sm-4 cv-field">
+          <h4>Médico Cirujano Partero</h4>
+          <p>Universidad Autónoma de Nuevo León <br/>Monterrey, Nuevo León <br/>TITULADO  Sep 1975 – Jul 1983 <br/>
+            <strong>CÉDULA  997817</strong>
+          </p>
+        </div>
+        <div class="col-sm-4 cv-field">
+          <h4>Título de Cirujano General</h4>
+          <p>Universidad Autónoma de Nuevo León <br/>Certificado por el Consejo Mexicano de Cirugía General <br/>
+            Julio 1989, México, DF.
+          </p>
+        </div>
+        <div class="col-sm-4 cv-field">
+          <h4>Título de Cirujano Plástico</h4>
+          <p>Universidad Autónoma de Nuevo León <br/>Certificado por el Consejo Mexicano de Cirugía Plástica,
+             Estética y Reconstructiva<br/>Febrero 1992 México, DF. <br/>TITULADO  1989-1992 <br/>
+             <strong>CEDULA 3279071</strong>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <%= render 'static_pages/cv_fellows' %>
+  <%= render 'static_pages/cv_certifications' %>
+  <%= render 'static_pages/cv_associations' %>
+  <%= render 'static_pages/cv_publications' %>
+  <%= render 'static_pages/cv_conferences' %>
+
+  <div class="row featurette">
+    <div class="col-md-12">
+    </div>
+  </div>
+</section>

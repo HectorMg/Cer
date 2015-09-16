@@ -92,18 +92,48 @@ h1{
 }
 
 h2 {
-  font-size: 1.2em;
+  font-size: 2.4em;
   letter-spacing: -1px;
   margin-bottom: 30px;
   text-align: center;
   font-weight: normal;
-  color: #777;
+  color: gray;
+}
+
+h3 {
+  font-size: 1.8em;
+  letter-spacing: -1px;
+  font-weight: normal;
+  color: gray;
+}
+
+h4 {
+  font-size: 1.5em;
+  letter-spacing: -1px;
+  font-weight: normal;
+  color: #DC6891;
 }
 
 p {
   font-size: 1.1em;
   line-height: 1.7em;
 }
+
+.featurette p {
+  font-size: 1em;
+  line-height: 1.2em;
+}
+
+.cv-field{
+  padding-left: 5px;
+  padding-right: 10px;
+}
+
+.cv-pic{
+  padding-right: 0px;
+  padding-left: 5px;
+}
+
 
 .main-intro p{
   font-size: 14px;
@@ -112,6 +142,37 @@ p {
 .main-block-section h1{
   text-align: center;
   margin-left: 225px;
+}
+
+.cv-title{
+  text-align: left;
+  margin-left: 0px;
+}
+
+.cv-subtitle{
+  text-align: left;
+  margin: auto;
+}
+
+.featurette{
+  margin-bottom: 20px;
+}
+
+.featurette h3 {
+  color: white;
+  background-color:#DC6891;
+  padding-left: 10px;
+}
+
+.lower-subtitles h3{
+  margin-left: 20px;
+}
+
+
+#headshot{
+  width: 90%;
+  display: block;
+  margin: auto;
 }
 
 .main-intro{
