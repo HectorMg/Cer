@@ -1,1 +1,42 @@
 <% provide(:title, @surgery.name) %>
+<script type="text/javascript">
+  $(document).ready(function() {
+    $("#lightSlider").lightSlider({
+      gallery: true,
+      item: 1,
+      loop:true,
+      slideMargin: 0,
+      thumbItem: 9
+    })
+  });
+
+</script>
+<div>
+  <!-- Title -->
+  <h1><%= @surgery.name %> </h1>
+
+  <!-- Clinical Cases -->
+  <center><h4>Casos Clínicos</h4></center>
+  <div class="row">
+    <div class="col-sm-2">
+    </div>
+    <div class="col-sm-8">
+      <ul id="lightSlider">
+        <% for i in 1..10 %>
+          <% listElem = "<li data-thumb='http://sachinchoolur.github.io/lightslider/img/thumb/cS-#{i}.jpg'>".html_safe %>
+          <% source = "http://sachinchoolur.github.io/lightslider/img/cS-#{i}.jpg".html_safe %>
+          <% baseimg = @surgery.img %>
+          <%= content_tag(:li, image_tag(baseimg + "-#{i}"), 'data-thumb' => image_path(baseimg + "-#{i}")) %>
+        <% end %>
+      </ul>
+  </div>
+  <div class="col-sm-2">
+  </div>
+  </div>
+  <!-- Description -->
+  <h4>Descripción del Procedimiento</h4>
+  <div class="surgery-description">
+    <%= simple_format @surgery.description %>
+  </div>
+
+</div>
