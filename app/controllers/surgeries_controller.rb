@@ -1,0 +1,12 @@
+class SurgeriesController < ApplicationController
+  def index
+    @surgeries = Surgery.all
+  end
+
+  def new
+  end
+
+  def show
+    @surgery = Surgery.find(params[:id])
+  end
+end

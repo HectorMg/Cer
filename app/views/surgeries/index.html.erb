@@ -1,0 +1,95 @@
+<% provide(:title, "Surgeries" ) %>
+<div>
+  <h1>Cirugías</h1>
+  <div>
+
+    <!-- Contour-->
+    <div class="container surgery-line">
+      <div class="row">
+        <h3 class= "surgery-category-title">Cirugías del Contorno Corporal</h3>
+      </div>
+      <div class="row">
+
+        <!-- Iterate through Contour surgeries -->
+        <% @surgeries.each do |s| %>
+          <% if s.category == "contour" then %>
+            <div class="col-sm-3">
+              <div class="row ">
+                  <% if s.img != nil then%>
+                    <%= link_to image_tag(s.img, :class => "img-responsive surgery-pic"), surgery_path(s) %>
+                  <% else %>
+                    <%= link_to image_tag("https://placehold.it/200x200", :class => "img-responsive surgery-pic"), surgery_path(s) %>
+                  <% end %>
+              </div>
+              <div class="row">
+                <h4 class="surgery-link"><%= link_to s.name, surgery_path(s) %></h4>
+              </div>
+            </div>
+          <% end %>
+        <% end %>
+        <!-- End iteration -->
+      </div>
+    </div>
+    <hr>
+    <!-- End contour-->
+
+    <!-- Facial -->
+    <div class="container surgery-line">
+      <div class="row">
+        <h3 class= "surgery-category-title">Cirugía Estética Facial</h3>
+      </div>
+      <div class="row">
+        <!-- Iterate through facial surgeries -->
+        <% @surgeries.each do |s| %>
+          <% if s.category == "facial" then %>
+            <div class="col-sm-3">
+              <div class="row ">
+                  <% if s.img != nil then%>
+                    <%= link_to image_tag(s.img, :class => "img-responsive surgery-pic"), surgery_path(s) %>
+                  <% else %>
+                    <%= link_to image_tag("https://placehold.it/200x200", :class => "img-responsive surgery-pic"), surgery_path(s) %>
+                  <% end %>
+              </div>
+              <div class="row">
+                <h4 class="surgery-link"><%= link_to s.name, surgery_path(s) %></h4>
+              </div>
+            </div>
+          <% end %>
+        <% end %>
+        <!-- End iteration -->
+    </div>
+  </div>
+  <hr>
+  <!-- End facial -->
+
+    <!-- Reconstructive -->
+    <div class="container surgery-line">
+      <div class="row">
+        <h3 class= "surgery-category-title">Cirugía Reconstructiva</h3>
+      </div>
+      <div class="row">
+        <!-- Iterate through reconstructive surgeries -->
+        <% @surgeries.each do |s| %>
+          <% if s.category == "reconstructive" then %>
+            <div class="col-sm-3">
+              <div class="row ">
+                  <% if s.img != nil then%>
+                    <%= link_to image_tag(s.img, :class => "img-responsive surgery-pic"), surgery_path(s) %>
+                  <% else %>
+                    <%= link_to image_tag("https://placehold.it/200x200", :class => "img-responsive surgery-pic"), surgery_path(s) %>
+                  <% end %>
+              </div>
+              <div class="row">
+                <h4 class="surgery-link"><%= link_to s.name, surgery_path(s) %></h4>
+              </div>
+            </div>
+          <% end %>
+        <% end %>
+        <!-- End iteration -->
+      </div>
+    </div>
+    <hr>
+    <!-- End reconstructive -->
+
+  </div>
+</div>

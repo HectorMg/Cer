@@ -47,7 +47,7 @@
             <ul class="nav navbar-nav navbar-right" id="nav-links">
               <li class="nav-links"><%= link_to "Home", root_path, :class => "nav-links, 'data-no-turbolink' => true" %></li>
               <li class="nav-links"><%= link_to "Curriculum Vitae", curriculum_path, :class => "nav-links, 'data-no-turbolink' => true" %></li>
-              <li class="nav-links"><%= link_to "Cirugías", '#', :class => "nav-links, 'data-no-turbolink' => true" %></li>
+              <li class="nav-links"><%= link_to "Cirugías", surgeries_path, :class => "nav-links, 'data-no-turbolink' => true" %></li>
               <li class="nav-links"><%= link_to "Instalaciones", facilities_path, :class => "nav-links, 'data-no-turbolink' => true" %></li>
               <li class="nav-links"><%= link_to "Contáctanos", contact_path, :class => "nav-links, 'data-no-turbolink' => true" %></li>
             </ul>
@@ -55,7 +55,7 @@
         </div>
       </header>
       <div class="container container-main">
-        <div class="col-sm-12">
+        <div class="container no-margin">
           <div class="row">
             <div class="col-sm-9 main-block">
                 <%= yield %>
