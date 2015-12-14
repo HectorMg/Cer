@@ -23,10 +23,8 @@
     <div class="col-sm-8">
       <ul id="lightSlider">
         <% for i in 1..10 %>
-          <% listElem = "<li data-thumb='http://sachinchoolur.github.io/lightslider/img/thumb/cS-#{i}.jpg'>".html_safe %>
-          <% source = "http://sachinchoolur.github.io/lightslider/img/cS-#{i}.jpg".html_safe %>
           <% baseimg = @surgery.img %>
-          <%= content_tag(:li, image_tag(baseimg + "-#{i}"), 'data-thumb' => image_path(baseimg + "-#{i}")) %>
+          <%= content_tag(:li, image_tag(baseimg + "-#{i}.png"), 'data-thumb' => image_path(baseimg + "-#{i}.png")) %>
         <% end %>
       </ul>
   </div>
