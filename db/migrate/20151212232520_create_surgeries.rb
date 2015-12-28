@@ -6,6 +6,7 @@ class CreateSurgeries < ActiveRecord::Migration
       t.string :path
       t.string :img
       t.string :category
+      t.integer :picquantity
 
       t.timestamps null: false
     end
