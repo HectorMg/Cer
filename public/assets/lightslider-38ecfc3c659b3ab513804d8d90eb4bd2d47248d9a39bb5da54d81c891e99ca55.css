@@ -1,0 +1,470 @@
+/*! lightslider - v1.1.3 - 2015-04-14
+* https://github.com/sachinchoolur/lightslider
+* Copyright (c) 2015 Sachin N; Licensed MIT */
+/** /!!! core css Should not edit !!!/**/
+/* line 7, /Users/HectorMg/workspace/Cer/vendor/assets/stylesheets/lightslider.css.scss */
+.lSSlideOuter {
+  overflow: hidden;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  width: 100%;
+}
+
+/* line 17, /Users/HectorMg/workspace/Cer/vendor/assets/stylesheets/lightslider.css.scss */
+.lightSlider:before, .lightSlider:after {
+  content: " ";
+  display: table;
+}
+
+/* line 22, /Users/HectorMg/workspace/Cer/vendor/assets/stylesheets/lightslider.css.scss */
+.lightSlider {
+  overflow: hidden;
+  margin: 0;
+}
+
+/* line 26, /Users/HectorMg/workspace/Cer/vendor/assets/stylesheets/lightslider.css.scss */
+.lSSlideWrapper {
+  max-width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+/* line 31, /Users/HectorMg/workspace/Cer/vendor/assets/stylesheets/lightslider.css.scss */
+.lSSlideWrapper > .lightSlider:after {
+  clear: both;
+}
+
+/* line 34, /Users/HectorMg/workspace/Cer/vendor/assets/stylesheets/lightslider.css.scss */
+.lSSlideWrapper .lSSlide {
+  -webkit-transform: translate(0px, 0px);
+  -ms-transform: translate(0px, 0px);
+  transform: translate(0px, 0px);
+  -webkit-transition: all 1s;
+  -webkit-transition-property: -webkit-transform,height;
+  -moz-transition-property: -moz-transform,height;
+  transition-property: transform,height;
+  -webkit-transition-duration: inherit !important;
+  transition-duration: inherit !important;
+  -webkit-transition-timing-function: inherit !important;
+  transition-timing-function: inherit !important;
+  width: 800px;
+}
+
+/* line 48, /Users/HectorMg/workspace/Cer/vendor/assets/stylesheets/lightslider.css.scss */
+.lSSlideWrapper .lSFade {
+  position: relative;
+  width: 500px;
+}
+
+/* line 52, /Users/HectorMg/workspace/Cer/vendor/assets/stylesheets/lightslider.css.scss */
+.lSSlideWrapper .lSFade > * {
+  position: absolute !important;
+  top: 0;
+  left: 0;
+  z-index: 9;
+  margin-right: 0;
+  width: 100%;
+}
+
+/* line 60, /Users/HectorMg/workspace/Cer/vendor/assets/stylesheets/lightslider.css.scss */
+.lSSlideWrapper.usingCss .lSFade > * {
+  opacity: 0;
+  -webkit-transition-delay: 0s;
+  transition-delay: 0s;
+  -webkit-transition-duration: inherit !important;
+  transition-duration: inherit !important;
+  -webkit-transition-property: opacity;
+  transition-property: opacity;
+  -webkit-transition-timing-function: inherit !important;
+  transition-timing-function: inherit !important;
+}
+
+/* line 71, /Users/HectorMg/workspace/Cer/vendor/assets/stylesheets/lightslider.css.scss */
+.lSSlideWrapper .lSFade > *.active {
+  z-index: 10;
+}
+
+/* line 74, /Users/HectorMg/workspace/Cer/vendor/assets/stylesheets/lightslider.css.scss */
+.lSSlideWrapper.usingCss .lSFade > *.active {
+  opacity: 1;
+}
+
+/** /!!! End of core css Should not edit !!!/**/
+/* Pager */
+/* line 80, /Users/HectorMg/workspace/Cer/vendor/assets/stylesheets/lightslider.css.scss */
+.lSSlideOuter .lSPager.lSpg {
+  margin: 10px 0 0;
+  padding: 0;
+  text-align: center;
+}
+
+/* line 85, /Users/HectorMg/workspace/Cer/vendor/assets/stylesheets/lightslider.css.scss */
+.lSSlideOuter .lSPager.lSpg > li {
+  cursor: pointer;
+  display: inline-block;
+  padding: 0 5px;
+}
+
+/* line 90, /Users/HectorMg/workspace/Cer/vendor/assets/stylesheets/lightslider.css.scss */
+.lSSlideOuter .lSPager.lSpg > li a {
+  background-color: #222222;
+  border-radius: 30px;
+  display: inline-block;
+  height: 10px;
+  overflow: hidden;
+  text-indent: -999em;
+  width: 10px;
+  position: relative;
+  z-index: 99;
+  -webkit-transition: all 0.5s linear 0s;
+  transition: all 0.5s linear 0s;
+}
+
+/* line 103, /Users/HectorMg/workspace/Cer/vendor/assets/stylesheets/lightslider.css.scss */
+.lSSlideOuter .lSPager.lSpg > li:hover a, .lSSlideOuter .lSPager.lSpg > li.active a {
+  background-color: #428bca;
+}
+
+/* line 106, /Users/HectorMg/workspace/Cer/vendor/assets/stylesheets/lightslider.css.scss */
+.lSSlideOuter .media {
+  opacity: 0.8;
+}
+
+/* line 109, /Users/HectorMg/workspace/Cer/vendor/assets/stylesheets/lightslider.css.scss */
+.lSSlideOuter .media.active {
+  opacity: 1;
+}
+
+/* End of pager */
+/** Gallery */
+/* line 115, /Users/HectorMg/workspace/Cer/vendor/assets/stylesheets/lightslider.css.scss */
+.lSSlideOuter .lSPager.lSGallery {
+  list-style: none outside none;
+  padding-left: 0;
+  margin: 0;
+  text-align: center;
+  overflow: hidden;
+  transform: translate3d(0px, 0px, 0px);
+  -moz-transform: translate3d(0px, 0px, 0px);
+  -ms-transform: translate3d(0px, 0px, 0px);
+  -webkit-transform: translate3d(0px, 0px, 0px);
+  -o-transform: translate3d(0px, 0px, 0px);
+  -webkit-transition-property: -webkit-transform;
+  -moz-transition-property: -moz-transform;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* line 135, /Users/HectorMg/workspace/Cer/vendor/assets/stylesheets/lightslider.css.scss */
+.lSSlideOuter .lSPager.lSGallery li {
+  overflow: hidden;
+  -webkit-transition: border-radius 0.12s linear 0s 0.35s linear 0s;
+  transition: border-radius 0.12s linear 0s 0.35s linear 0s;
+  width: 100%;
+  padding: 0;
+}
+
+/* line 142, /Users/HectorMg/workspace/Cer/vendor/assets/stylesheets/lightslider.css.scss */
+.lSSlideOuter .lSPager.lSGallery li.active, .lSSlideOuter .lSPager.lSGallery li:hover {
+  border-radius: 5px;
+}
+
+/* line 145, /Users/HectorMg/workspace/Cer/vendor/assets/stylesheets/lightslider.css.scss */
+.lSSlideOuter .lSPager.lSGallery img {
+  display: block;
+  height: auto;
+  width: 100%;
+  margin-right: 0;
+}
+
+/* line 151, /Users/HectorMg/workspace/Cer/vendor/assets/stylesheets/lightslider.css.scss */
+.lSSlideOuter .lSPager.lSGallery:before, .lSSlideOuter .lSPager.lSGallery:after {
+  content: " ";
+  display: table;
+}
+
+/* line 155, /Users/HectorMg/workspace/Cer/vendor/assets/stylesheets/lightslider.css.scss */
+.lSSlideOuter .lSPager.lSGallery:after {
+  clear: both;
+}
+
+/* End of Gallery*/
+/* slider actions */
+/* line 161, /Users/HectorMg/workspace/Cer/vendor/assets/stylesheets/lightslider.css.scss */
+.lSAction > a {
+  width: 32px;
+  display: block;
+  top: 50%;
+  height: 32px;
+  background-image: url(/assets/controls-f8e42b472fde70ee7883cf509d3d1c135a123e51fadf3301a392944aca8c46ec.png);
+  cursor: pointer;
+  position: absolute;
+  z-index: 99;
+  margin-top: -16px;
+  opacity: 0.5;
+  -webkit-transition: opacity 0.35s linear 0s;
+  transition: opacity 0.35s linear 0s;
+}
+
+/* line 175, /Users/HectorMg/workspace/Cer/vendor/assets/stylesheets/lightslider.css.scss */
+.lSAction > a:hover {
+  opacity: 1;
+}
+
+/* line 178, /Users/HectorMg/workspace/Cer/vendor/assets/stylesheets/lightslider.css.scss */
+.lSAction > .lSPrev {
+  background-position: 0 0;
+  left: 10px;
+}
+
+/* line 182, /Users/HectorMg/workspace/Cer/vendor/assets/stylesheets/lightslider.css.scss */
+.lSAction > .lSNext {
+  background-position: -32px 0;
+  right: 10px;
+}
+
+/* line 186, /Users/HectorMg/workspace/Cer/vendor/assets/stylesheets/lightslider.css.scss */
+.lSAction > a.disabled {
+  pointer-events: none;
+}
+
+/* line 189, /Users/HectorMg/workspace/Cer/vendor/assets/stylesheets/lightslider.css.scss */
+.cS-hidden {
+  height: 1px;
+  opacity: 0;
+  filter: alpha(opacity=0);
+  overflow: hidden;
+}
+
+/* vertical */
+/* line 198, /Users/HectorMg/workspace/Cer/vendor/assets/stylesheets/lightslider.css.scss */
+.lSSlideOuter.vertical {
+  position: relative;
+}
+
+/* line 201, /Users/HectorMg/workspace/Cer/vendor/assets/stylesheets/lightslider.css.scss */
+.lSSlideOuter.vertical.noPager {
+  padding-right: 0px !important;
+}
+
+/* line 204, /Users/HectorMg/workspace/Cer/vendor/assets/stylesheets/lightslider.css.scss */
+.lSSlideOuter.vertical .lSGallery {
+  position: absolute !important;
+  right: 0;
+  top: 0;
+}
+
+/* line 209, /Users/HectorMg/workspace/Cer/vendor/assets/stylesheets/lightslider.css.scss */
+.lSSlideOuter.vertical .lightSlider > * {
+  width: 100% !important;
+  max-width: none !important;
+}
+
+/* vertical controlls */
+/* line 215, /Users/HectorMg/workspace/Cer/vendor/assets/stylesheets/lightslider.css.scss */
+.lSSlideOuter.vertical .lSAction > a {
+  left: 50%;
+  margin-left: -14px;
+  margin-top: 0;
+}
+
+/* line 220, /Users/HectorMg/workspace/Cer/vendor/assets/stylesheets/lightslider.css.scss */
+.lSSlideOuter.vertical .lSAction > .lSNext {
+  background-position: 31px -31px;
+  bottom: 10px;
+  top: auto;
+}
+
+/* line 225, /Users/HectorMg/workspace/Cer/vendor/assets/stylesheets/lightslider.css.scss */
+.lSSlideOuter.vertical .lSAction > .lSPrev {
+  background-position: 0 -31px;
+  bottom: auto;
+  top: 10px;
+}
+
+/* vertical */
+/* Rtl */
+/* line 234, /Users/HectorMg/workspace/Cer/vendor/assets/stylesheets/lightslider.css.scss */
+.lSSlideOuter.lSrtl {
+  direction: rtl;
+}
+
+/* line 237, /Users/HectorMg/workspace/Cer/vendor/assets/stylesheets/lightslider.css.scss */
+.lSSlideOuter .lightSlider, .lSSlideOuter .lSPager {
+  padding-left: 0;
+  list-style: none outside none;
+}
+
+/* line 241, /Users/HectorMg/workspace/Cer/vendor/assets/stylesheets/lightslider.css.scss */
+.lSSlideOuter.lSrtl .lightSlider, .lSSlideOuter.lSrtl .lSPager {
+  padding-right: 0;
+}
+
+/* line 244, /Users/HectorMg/workspace/Cer/vendor/assets/stylesheets/lightslider.css.scss */
+.lSSlideOuter .lightSlider > *, .lSSlideOuter .lSGallery li {
+  float: left;
+}
+
+/* line 247, /Users/HectorMg/workspace/Cer/vendor/assets/stylesheets/lightslider.css.scss */
+.lSSlideOuter.lSrtl .lightSlider > *, .lSSlideOuter.lSrtl .lSGallery li {
+  float: right !important;
+}
+
+/* Rtl */
+@-webkit-keyframes rightEnd {
+  0% {
+    left: 0;
+  }
+  50% {
+    left: -15px;
+  }
+  100% {
+    left: 0;
+  }
+}
+@keyframes rightEnd {
+  0% {
+    left: 0;
+  }
+  50% {
+    left: -15px;
+  }
+  100% {
+    left: 0;
+  }
+}
+@-webkit-keyframes topEnd {
+  0% {
+    top: 0;
+  }
+  50% {
+    top: -15px;
+  }
+  100% {
+    top: 0;
+  }
+}
+@keyframes topEnd {
+  0% {
+    top: 0;
+  }
+  50% {
+    top: -15px;
+  }
+  100% {
+    top: 0;
+  }
+}
+@-webkit-keyframes leftEnd {
+  0% {
+    left: 0;
+  }
+  50% {
+    left: 15px;
+  }
+  100% {
+    left: 0;
+  }
+}
+@keyframes leftEnd {
+  0% {
+    left: 0;
+  }
+  50% {
+    left: 15px;
+  }
+  100% {
+    left: 0;
+  }
+}
+@-webkit-keyframes bottomEnd {
+  0% {
+    bottom: 0;
+  }
+  50% {
+    bottom: -15px;
+  }
+  100% {
+    bottom: 0;
+  }
+}
+@keyframes bottomEnd {
+  0% {
+    bottom: 0;
+  }
+  50% {
+    bottom: -15px;
+  }
+  100% {
+    bottom: 0;
+  }
+}
+/* line 356, /Users/HectorMg/workspace/Cer/vendor/assets/stylesheets/lightslider.css.scss */
+.lSSlideOuter .rightEnd {
+  -webkit-animation: rightEnd 0.3s;
+  animation: rightEnd 0.3s;
+  position: relative;
+}
+
+/* line 361, /Users/HectorMg/workspace/Cer/vendor/assets/stylesheets/lightslider.css.scss */
+.lSSlideOuter .leftEnd {
+  -webkit-animation: leftEnd 0.3s;
+  animation: leftEnd 0.3s;
+  position: relative;
+}
+
+/* line 366, /Users/HectorMg/workspace/Cer/vendor/assets/stylesheets/lightslider.css.scss */
+.lSSlideOuter.vertical .rightEnd {
+  -webkit-animation: topEnd 0.3s;
+  animation: topEnd 0.3s;
+  position: relative;
+}
+
+/* line 371, /Users/HectorMg/workspace/Cer/vendor/assets/stylesheets/lightslider.css.scss */
+.lSSlideOuter.vertical .leftEnd {
+  -webkit-animation: bottomEnd 0.3s;
+  animation: bottomEnd 0.3s;
+  position: relative;
+}
+
+/* line 376, /Users/HectorMg/workspace/Cer/vendor/assets/stylesheets/lightslider.css.scss */
+.lSSlideOuter.lSrtl .rightEnd {
+  -webkit-animation: leftEnd 0.3s;
+  animation: leftEnd 0.3s;
+  position: relative;
+}
+
+/* line 381, /Users/HectorMg/workspace/Cer/vendor/assets/stylesheets/lightslider.css.scss */
+.lSSlideOuter.lSrtl .leftEnd {
+  -webkit-animation: rightEnd 0.3s;
+  animation: rightEnd 0.3s;
+  position: relative;
+}
+
+/*/  GRab cursor */
+/* line 387, /Users/HectorMg/workspace/Cer/vendor/assets/stylesheets/lightslider.css.scss */
+.lightSlider.lsGrab > * {
+  cursor: -webkit-grab;
+  cursor: -moz-grab;
+  cursor: -o-grab;
+  cursor: -ms-grab;
+  cursor: grab;
+}
+
+/* line 394, /Users/HectorMg/workspace/Cer/vendor/assets/stylesheets/lightslider.css.scss */
+.lightSlider.lsGrabbing > * {
+  cursor: move;
+  cursor: -webkit-grabbing;
+  cursor: -moz-grabbing;
+  cursor: -o-grabbing;
+  cursor: -ms-grabbing;
+  cursor: grabbing;
+}
