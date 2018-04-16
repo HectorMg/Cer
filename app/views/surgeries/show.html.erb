@@ -24,8 +24,8 @@
       <div class="col-sm-8">
         <ul id="lightSlider">
           <% for i in 1..@surgery.picquantity %>
-            <% baseimg = @surgery.img %>
-            <%= content_tag(:li, image_tag(baseimg + "-#{i}.png"), 'data-thumb' => image_path(baseimg + "-#{i}.png")) %>
+            <% baseimg = "#{@surgery.img}/" %>
+            <%= content_tag(:li, image_tag(baseimg+ "#{i}.png"), 'data-thumb' => image_path(baseimg + "#{i}.png")) %>
           <% end %>
         </ul>
     </div>
